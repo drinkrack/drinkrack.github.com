@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_mail import Mail, Message
 import os
 app = Flask(__name__)
+port = int(os.environ.get("PORT", 5000))  # Default to 5000 for local testing
 
 # Configure Flask-Mail with your SMTP server (e.g., Gmail)
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
@@ -34,4 +35,4 @@ def send_message():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=port)
