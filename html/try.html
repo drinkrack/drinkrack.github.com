@@ -58,9 +58,9 @@
             </li>
           </ul>
 
-          <div class="ml-auto">
+          <!-- <div class="ml-auto">
             <a href="#" class="btn btn-outline rounded-pill">Get a Quote</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </nav>
@@ -85,7 +85,7 @@
   <main>
     <div class="page-section">
       <div class="container">
-        <div class="text-center">
+        <div class="text-center wow fadeInUp">
           <div class="subhead">Find the Perfect Fit for Your Office</div>
           <h2 class="title-section">Choose your preferred beverage rack, <span class="marked">small, medium, or large</span>.</h2>
           <div class="divider mx-auto"></div>
@@ -93,7 +93,7 @@
   
         <div class="row mt-5 text-center d-flex align-items-end">
           <div class="col-lg-4 py-3">
-            <div class="display-3">
+            <div class="display-3 wow fadeInLeft">
               <img src="/assets/img/rack_small.png" alt="" height="280">
             </div>
             <h5></br>Small Size (2 shelves, 2 crates)</h5>
@@ -103,7 +103,7 @@
 
           </div>
           <div class="col-lg-4 py-3">
-            <div class="display-3">
+            <div class="display-3 wow fadeInUp">
               <img src="/assets/img/rack_medium.webp" alt="" height="400">
             </div>
             <h5></br>Medium Size (3 shelves, 3 crates)</h5>
@@ -112,7 +112,7 @@
             <button type="button" class="btn btn-outline rounded-pill choose-btn">Select This Size</button>
           </div>
           <div class="col-lg-4 py-3">
-            <div class="display-3">
+            <div class="display-3 wow fadeInRight">
               <img src="/assets/img/rack_large.jpg" alt="" height="385">
             </div>
             <h5></br>Large Size (3 shelves, 6 crates)</h5>
@@ -144,7 +144,7 @@
       </div> <!-- .container -->
     </div> <!-- .page-section -->
     
-    <div class="page-section">
+    <div class="page-section bg-light">
       <div class="container">
         <div class="row align-items-center">
           <!-- <div class="col-lg-6 py-3">
@@ -167,38 +167,38 @@
               </li>
             </ul>
           </div> -->
-          <div class="col-lg-6 py-3">
+          <div class="col-lg-6 py-3 wow fadeInUp">
             <div class="subhead">Getting Started</div>
             <h2 class="title-section">Tell Us About Your Office</h2>
             <div class="divider"></div>
             
             <form action="#">
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Full name">
+                <input type="text" class="form-control" placeholder="Full name" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Company name">
+                <input type="text" class="form-control" placeholder="Company name" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Email">
+                <input type="text" class="form-control" placeholder="Email" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Phone number">
+                <input type="text" class="form-control" placeholder="Phone number" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Street name">
+                <input type="text" class="form-control" placeholder="Street name" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="City">
+                <input type="text" class="form-control" placeholder="City" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Postal code">
+                <input type="text" class="form-control" placeholder="Postal code" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Floor number">
+                <input type="text" class="form-control" placeholder="Floor number" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Opening hours (e.g., Mon-Fri 9AM-6PM)">
+                <input type="text" class="form-control" placeholder="Opening hours (e.g., Mon-Fri 9AM-6PM)" required>
               </div>
               <div class="py-2">
                 <input type="text" class="form-control" placeholder="Number of employees (Optional)">
@@ -206,7 +206,19 @@
               <div class="py-2">
                 <textarea rows="6" class="form-control" placeholder="Notes (Optional)"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary rounded-pill mt-4">Request a Quote</button>
+              <div class="form-check mt-4">
+                <input class="form-check-input" type="checkbox" id="consentCheckbox" required>
+                <label class="form-check-label" for="consentCheckbox">
+                  <p>
+                  By submitting this form, I consent to being contacted by DrinkRack. I understand that I can withdraw my consent at any time by sending an email to info@drinkrack.com and request the deletion of my data. By using this form, I agree to the storage and processing of my data by this website.
+                  </p>
+                  <p>
+                    We do not use cookies, Google Analytics, or similar tracking tools. Your data is stored solely on our internal system to facilitate the delivery and management of our beverage racks. We handle all data responsibly and do not share it with third parties. For more details, please refer to our privacy policy at 
+                    <a href="/html/privacy.html">https://www.drinksrack.de/privacy</a>
+                  </p>
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary rounded-pill mt-4">Request Your Free Rack</button>
             </form>
           </div>
         </div>

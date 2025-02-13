@@ -57,9 +57,9 @@
             </li>
           </ul>
 
-          <div class="ml-auto">
+          <!-- <div class="ml-auto">
             <a href="#" class="btn btn-outline rounded-pill">Get a Quote</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </nav>
@@ -72,8 +72,8 @@
             <p class="text-lg mb-5">
               The Ultimate Refreshment Station for Your Office! </br>We provide a free beverage rack—employees only pay for what they consume. If not satisfied, We'll remove it at no cost.
             </p>
-            <a href="/html/try.html" class="btn btn-primary">Try DrinkRack!</a>
-            <a href="/html/restock.html" class="btn btn-outline border text-secondary">Out of beverages? Restock now!</a>
+            <a href="/html/try.html" class="btn btn-primary rounded-pill">Try DrinkRack!</a> <!-- mt-4 -->
+            <a href="/html/restock.html" class="btn btn-outline border text-secondary rounded-pill">Out of beverages? Restock now!</a> <!-- mt-4 -->
             
             <!-- <a href="#" class="btn btn-primary btn-split ml-2">
               Need an urgent restock? Let us know!
@@ -210,7 +210,7 @@
     <div class="page-section">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 py-3 wow fadeInLeft">
+          <div class="col-lg-6 py-3 wow zoomIn">
             <h2 class="title-section">How It <span class="marked">Works?</span></h2>
             <div class="divider"></div>
               <h5>1. Get in Touch</h5>
@@ -233,17 +233,17 @@
               <p>
                 We monitor stock levels and refill regularly. If the rack runs low unexpectedly, just let us know—we’ll restock quickly!
               </p>
-              <a href="html/try.html" class="btn btn-primary">Try it now</a>
-              <a href="html/services.html" class="btn btn-outline ml-2">More Details</a>
+              <a href="html/try.html" class="btn btn-primary rounded-pill">Request Your Free Rack</a>
+              <a href="html/services.html" class="btn btn-outline ml-2 rounded-pill">More Details</a>
           </div>
-          <div class="col-lg-6 py-3 wow zoomIn">
+          <div class="col-lg-6 py-3 wow fadeInRight">
             <div class="img-place text-center">
               <img src="../assets/img/dolly.svg" alt="">
             </div>
           </div>
         </div>
       </div> <!-- .container -->
-    </div> <!-- .page-section -->
+    </div>
 
     <!-- <div class="page-section counter-section">
       <div class="container">
@@ -419,7 +419,7 @@
     
     <div class="page-section bg-light">
       <div class="container">
-          <div class="row align-items-center">
+          <div class="row align-items-start">
             <div class="col-lg-6 py-3 wow fadeInUp">
               <h2 class="title-section">Get in Touch</h2>
               <div class="divider"></div>
@@ -439,10 +439,17 @@
                   <div class="content"><a href="#">+00 1122 3344 55</a></div>
                 </li> -->
               </ul>
+              <!-- <div class="col-lg-6 py-3 wow fadeInUp"> -->
+                <p>
+                  We do not use cookies, Google Analytics, or similar tracking tools. Your data is stored solely on our internal system to facilitate the delivery and management of our beverage racks. We handle all data responsibly and do not share it with third parties. For more details, please refer to our privacy policy at 
+                  <a href="/html/privacy.html">https://www.drinksrack.de/privacy</a>
+                </p>
+              <!-- </div> -->
             </div>
+
             <div class="col-lg-6 py-3 wow fadeInUp">
-              <div class="subhead">Contact Us</div>
-              <h2 class="title-section">Drop Us a Line</h2>
+              <h2 class="title-section">Contact Us</h2>
+              <div class="subhead">Drop Us a Line</div>
               <div class="divider"></div>
               
               <form id="contactForm">
@@ -455,9 +462,17 @@
                 <div class="py-2">
                   <textarea rows="6" class="form-control" name="message" placeholder="Enter message" required></textarea>
                 </div>
+
+                <div class="form-check mt-4">
+                  <input class="form-check-input" type="checkbox" id="consentCheckbox" required>
+                  <label class="form-check-label" for="consentCheckbox">
+                    <p>
+                    By submitting this form, I consent to being contacted by DrinkRack. I understand that I can withdraw my consent at any time by sending an email to info@drinkrack.com and request the deletion of my data. By using this form, I agree to the storage and processing of my data by this website.
+                    </p>
+                  </label>
+                </div>
                 <button type="submit" class="btn btn-primary rounded-pill mt-4">Send Message</button>
               </form>
-              
               <script>
               document.getElementById("contactForm").addEventListener("submit", function(event) {
                   event.preventDefault(); // Prevent default form submission
@@ -651,11 +666,15 @@
         </div>
         <div class="col-sm-6 py-2 text-right">
           <div class="d-inline-block px-3">
-            <a href="#">Privacy</a>
+            <a href="html/legal.html">Legal Disclosure</a>
           </div>
           <div class="d-inline-block px-3">
-            <a href="#">Contact Us</a>
+            <a href="#">Terms & Conditions</a>
           </div>
+          <div class="d-inline-block px-3">
+            <a href="#">Privacy Policy</a>
+          </div>
+
         </div>
       </div>
     </div> <!-- .container -->

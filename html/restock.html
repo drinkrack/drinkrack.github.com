@@ -58,9 +58,9 @@
             </li>
           </ul>
 
-          <div class="ml-auto">
+          <!-- <div class="ml-auto">
             <a href="#" class="btn btn-outline rounded-pill">Get a Quote</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </nav>
@@ -72,10 +72,10 @@
             <nav aria-label="Breadcrumb">
               <ul class="breadcrumb justify-content-center py-0 bg-transparent">
                 <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-                <li class="breadcrumb-item active">Contact</li>
+                <li class="breadcrumb-item active">Try DrinkRack</li>
               </ul>
             </nav>
-            <h1 class="text-center">Contact Us</h1>
+            <h1 class="text-center">Try DrinkRack</h1>
           </div>
         </div>
       </div>
@@ -85,8 +85,24 @@
   <main>
     <div class="page-section">
       <div class="container">
+        <div class="row">
+          <div class="col-lg-6 wow fadeInUp">
+            <div class="subhead">NEED A REFILL?</div>
+            <h2 class="title-section">Is your DrinkRack running low?<span class="marked"> We'll take care of it!</span></h2>
+            <div class="divider"></div>
+              <p> 
+                Simply enter your Rack ID found on the label of your DrinkRack.
+                This helps us quickly identify your location and ensure a fresh selection of beverages is on the way.
+              </p>
+          </div>
+        </div>
+      </div> <!-- .container -->
+    </div>
+    
+    <div class="page-section bg-light">
+      <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6 py-3">
+          <!-- <div class="col-lg-6 py-3">
             <h2 class="title-section">Get in Touch</h2>
             <div class="divider"></div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Laborum ratione autem quidem veritatis!</p>
@@ -105,24 +121,54 @@
                 <div class="content"><a href="#">+00 1122 3344 55</a></div>
               </li>
             </ul>
-          </div>
-          <div class="col-lg-6 py-3">
-            <div class="subhead">Contact Us</div>
-            <h2 class="title-section">Drop Us a Line</h2>
+          </div> -->
+
+          <div class="col-lg-6 wow fadeIn">
+            <div class="subhead">Hassle-Free Restocking</div>
+            <h2 class="title-section">Every DrinkRack has a code. Find it on the label and enter it in the form</h2>
             <div class="divider"></div>
             
             <form action="#">
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Full name">
+                <input type="text" class="form-control" placeholder="Rack ID" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Email">
+                <input type="text" class="form-control" placeholder="Company name" required>
               </div>
               <div class="py-2">
-                <textarea rows="6" class="form-control" placeholder="Enter message"></textarea>
+                <input type="text" class="form-control" placeholder="Full name" required>
               </div>
-              <button type="submit" class="btn btn-primary rounded-pill mt-4">Send Message</button>
+              <div class="py-2">
+                <input type="text" class="form-control" placeholder="Email" required>
+              </div>
+              <div class="py-2">
+                <input type="text" class="form-control" placeholder="Phone number" required>
+              </div>
+              <div class="py-2">
+                <input type="text" class="form-control" placeholder="Opening hours (e.g., Mon-Fri 9AM-6PM)" required>
+              </div>
+              <div class="py-2">
+                <textarea rows="6" class="form-control" placeholder="Notes (Optional)"></textarea>
+              </div>
+              <div class="form-check mt-4">
+                <input class="form-check-input" type="checkbox" id="consentCheckbox" required>
+                <label class="form-check-label" for="consentCheckbox">
+                  <p>
+                  By submitting this form, I consent to being contacted by DrinkRack. I understand that I can withdraw my consent at any time by sending an email to info@drinkrack.com and request the deletion of my data. By using this form, I agree to the storage and processing of my data by this website.
+                  </p>
+                  <p>
+                    We do not use cookies, Google Analytics, or similar tracking tools. Your data is stored solely on our internal system to facilitate the delivery and management of our beverage racks. We handle all data responsibly and do not share it with third parties. For more details, please refer to our privacy policy at 
+                    <a href="/html/privacy.html">https://www.drinksrack.de/privacy</a>
+                  </p>
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary rounded-pill mt-4">Request a Refill</button>
             </form>
+          </div>
+          <div class="col-lg-6 wow fadeIn">
+            <div class="img-place text-center">
+              <img src="../assets/img/rackID.svg" alt="" style="height:70%;">
+            </div>
           </div>
         </div>
       </div> <!-- .container -->
