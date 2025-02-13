@@ -1441,6 +1441,10 @@
 .mai-logo-instagram:before {
   content: "\ec00";
 }
+.mai-logo-tiktok:before {
+  content: "\e07b"; /* Unicode for TikTok in FontAwesome */
+  font-family: "Font Awesome 6 Brands"; /* Ensure it loads correctly */
+}
 .mai-logo-internet-explorer:before {
   content: "\ec01";
 }
