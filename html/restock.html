@@ -128,33 +128,40 @@
             <h2 class="title-section">Every DrinkRack has a code. Find it on the label and enter it in the form</h2>
             <div class="divider"></div>
             
-            <form action="#">
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+              <input type="hidden" name="access_key" value="03a8f042-af89-4a01-bd60-be0d2bec3023">
+          
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Rack ID" required>
+                <input type="text"  name="Full Name" id="fname" class="form-control" placeholder="Full name" required>
+              </div>
+
+              <div class="py-2">
+                <input type="text"  name="Company Name" id="cname" class="form-control" placeholder="Company name" required>
+              </div>
+
+              <div class="py-2">
+                <input type="text" name="Rack ID" id="rackid" class="form-control" placeholder="Rack ID" required>
+              </div>
+
+              <div class="py-2">
+                <input type="email" name="Email" id="email" class="form-control" placeholder="Email" required>
+              </div>
+
+              <div class="py-2">
+                <input type="Phone Number" name="tel" id="tel" class="form-control" placeholder="Phone number" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Company name" required>
+                <input type="text" name="Opening hours" id="openhours" class="form-control" placeholder="Opening hours (e.g., Mon-Fri 9AM-6PM)" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Full name" required>
-              </div>
-              <div class="py-2">
-                <input type="text" class="form-control" placeholder="Email" required>
-              </div>
-              <div class="py-2">
-                <input type="text" class="form-control" placeholder="Phone number" required>
-              </div>
-              <div class="py-2">
-                <input type="text" class="form-control" placeholder="Opening hours (e.g., Mon-Fri 9AM-6PM)" required>
-              </div>
-              <div class="py-2">
-                <textarea rows="6" class="form-control" placeholder="Notes (Optional)"></textarea>
+                <textarea rows="6" name="Notes" id="notes" class="form-control" placeholder="Notes (Optional)"></textarea>
               </div>
               <div class="form-check mt-4">
-                <input class="form-check-input" type="checkbox" id="consentCheckbox" required>
+                <input class="form-check-input" type="checkbox" name="consentCheckbox" id="consentCheckbox" required>
                 <label class="form-check-label" for="consentCheckbox">
                   <p>
-                  By submitting this form, I consent to being contacted by DrinkRack. I understand that I can withdraw my consent at any time by sending an email to info@drinkrack.com and request the deletion of my data. By using this form, I agree to the storage and processing of my data by this website.
+                    By submitting this form, I consent to being contacted by DrinkRack. I understand that I can withdraw my consent at any time by sending an email to <a href="mailto:info@drinkrack.com">info@drinkrack.com</a> and request the deletion of my data. By using this form, I agree to the storage and processing of my data by this website.
                   </p>
                   <p>
                     We do not use cookies, Google Analytics, or similar tracking tools. Your data is stored solely on our internal system to facilitate the delivery and management of our beverage racks. We handle all data responsibly and do not share it with third parties. For more details, please refer to our <a href="legal.html#privacy">privacy policy.</a>

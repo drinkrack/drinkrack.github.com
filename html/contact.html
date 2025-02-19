@@ -108,7 +108,7 @@
               </ul>
               <!-- <div class="col-lg-6 py-3 wow fadeInUp"> -->
                 <p>
-                  We do not use cookies, Google Analytics, or similar tracking tools. Your data is stored solely on our internal system to facilitate the delivery and management of our beverage racks. We handle all data responsibly and do not share it with third parties. For more details, please refer to our  <a href="legal.html#privacy">privacy policy.</a>
+                  We do not use cookies, Google Analytics, or similar tracking tools. Your data is stored solely on our internal system to facilitate the delivery and management of our beverage racks. We handle all data responsibly and do not share it with third parties. For more details, please refer to our <a href="legal.html#privacy">privacy policy.</a>
                 </p>
               <!-- </div> -->
             </div>
@@ -118,22 +118,26 @@
               <!-- <div class="subhead">Drop Us a Line</div> -->
               <div class="divider"></div>
               
-              <form id="contactForm">
+              <form action="https://api.web3forms.com/submit" method="POST">
+
+                <input type="hidden" name="access_key" value="03a8f042-af89-4a01-bd60-be0d2bec3023">
+                <input type="hidden" name="redirect" value="https://drinkrack.de/html/contact.html">
+    
                 <div class="py-2">
-                  <input type="text" class="form-control" name="name" placeholder="Full name" required>
+                  <input type="text" class="form-control" name="Full Name" placeholder="Full name" required>
                 </div>
                 <div class="py-2">
-                  <input type="email" class="form-control" name="email" placeholder="Email" required>
+                  <input type="email" class="form-control" name="Email" placeholder="Email" required>
                 </div>
                 <div class="py-2">
-                  <textarea rows="6" class="form-control" name="message" placeholder="Enter message" required></textarea>
+                  <textarea rows="6" class="form-control" name="Message" placeholder="Enter message" required></textarea>
                 </div>
 
                 <div class="form-check mt-4">
-                  <input class="form-check-input" type="checkbox" id="consentCheckbox" required>
+                  <input class="form-check-input" type="checkbox" id="consentCheckbox" name="consentCheckbox" required>
                   <label class="form-check-label" for="consentCheckbox">
                     <p>
-                    By submitting this form, I consent to being contacted by DrinkRack. I understand that I can withdraw my consent at any time by sending an email to info@drinkrack.com and request the deletion of my data. By using this form, I agree to the storage and processing of my data by this website.
+                      By submitting this form, I consent to being contacted by DrinkRack. I understand that I can withdraw my consent at any time by sending an email to <a href="mailto:info@drinkrack.com">info@drinkrack.com</a> and request the deletion of my data. By using this form, I agree to the storage and processing of my data by this website.
                     </p>
                   </label>
                 </div>

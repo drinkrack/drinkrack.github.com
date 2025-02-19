@@ -131,15 +131,15 @@
           </div>
         </div>
 
-        
         <script>
           document.addEventListener("DOMContentLoaded", function () {
             const buttons = document.querySelectorAll(".choose-btn");
-            const containers = document.querySelectorAll(".rack-container"); // Get all size boxes
+            const containers = document.querySelectorAll(".rack-container");
             const submitButton = document.querySelector("button[type='submit']");
-            
+            const rackSizeInput = document.getElementById("rackSize");
+        
             submitButton.disabled = true; // Disable submit initially
-            
+        
             buttons.forEach((button, index) => {
               button.addEventListener("click", function () {
                 // Remove styles from all buttons and boxes
@@ -149,6 +149,10 @@
                 // Add styles to clicked button and its parent container
                 this.classList.add("btn-primary", "text-white");
                 containers[index].classList.add("selected");
+        
+                // Set hidden input value based on selection
+                const rackSizes = ["Small (2 shelves, 2 crates)", "Medium (3 shelves, 3 crates)", "Large (3 shelves, 6 crates)"];
+                rackSizeInput.value = rackSizes[index];
         
                 // Enable submit button
                 submitButton.disabled = false;
@@ -174,49 +178,53 @@
             <h2 class="title-section">Tell Us About Your Office</h2>
             <div class="divider"></div>
             
-            <form action="#">
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+              <input type="hidden" name="access_key" value="03a8f042-af89-4a01-bd60-be0d2bec3023">
+              
+              <input type="hidden" id="rackSize" name="Rack Size">
+              
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Full name" required>
+                <input type="text" id="fname" name="Full Name" class="form-control" placeholder="Full name" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Company name" required>
+                <input type="text" id="cname" name="Company Name" class="form-control" placeholder="Company name" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Email" required>
+                <input type="email" id="email" name="Email" class="form-control" placeholder="Email" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Phone number" required>
+                <input type="tel" id="tel" name="Phone Number" class="form-control" placeholder="Phone number" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Street name" required>
+                <input type="text" id="address" name="Address" class="form-control" placeholder="Street name and number" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="City" required>
+                <input type="text" id="city" name="City" class="form-control" placeholder="City" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Postal code" required>
+                <input type="number" id="postalcode" name="Postal Code" class="form-control" placeholder="Postal code" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Floor number" required>
+                <input type="number" id="floor" name="Floor" class="form-control" placeholder="Floor number" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Opening hours (e.g., Mon-Fri 9AM-6PM)" required>
+                <input type="text" id="openhours" name="Opening hours" class="form-control" placeholder="Opening hours (e.g., Mon-Fri 9AM-6PM)" required>
               </div>
               <div class="py-2">
-                <input type="text" class="form-control" placeholder="Number of employees (Optional)">
+                <input type="number" id="nemployees" name="Number of employees" class="form-control" placeholder="Number of employees (Optional)">
               </div>
               <div class="py-2">
-                <textarea rows="6" class="form-control" placeholder="Notes (Optional)"></textarea>
+                <textarea rows="6" id="notes" name="notes" class="form-control" placeholder="Notes (Optional)"></textarea>
               </div>
               <div class="form-check mt-4">
-                <input class="form-check-input" type="checkbox" id="consentCheckbox" required>
+                <input class="form-check-input" id="consentCheckbox" name="consentCheckbox" type="checkbox" required>
                 <label class="form-check-label" for="consentCheckbox">
                   <p>
-                  By submitting this form, I consent to being contacted by DrinkRack. I understand that I can withdraw my consent at any time by sending an email to info@drinkrack.com and request the deletion of my data. By using this form, I agree to the storage and processing of my data by this website.
+                    By submitting this form, I consent to being contacted by DrinkRack. I understand that I can withdraw my consent at any time by sending an email to <a href="mailto:info@drinkrack.com">info@drinkrack.com</a> and request the deletion of my data. By using this form, I agree to the storage and processing of my data by this website.
                   </p>
                   <p>
-                    We do not use cookies, Google Analytics, or similar tracking tools. Your data is stored solely on our internal system to facilitate the delivery and management of our beverage racks. We handle all data responsibly and do not share it with third parties. For more details, please refer to our privacy policy at 
-                    <a href="/html/privacy.html">https://www.drinksrack.de/privacy</a>
+                    We do not use cookies, Google Analytics, or similar tracking tools. Your data is stored solely on our internal system to facilitate the delivery and management of our beverage racks. We handle all data responsibly and do not share it with third parties. For more details, please refer to our <a href="legal.html#privacy">privacy policy.</a>
                   </p>
                 </label>
               </div>
