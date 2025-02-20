@@ -130,7 +130,11 @@
             
             <form action="https://api.web3forms.com/submit" method="POST">
 
-              <input type="hidden" name="access_key" value="http://drinkrack.de/html/confirmations/confirm_refill.html">
+              <!-- Redirect after form submission -->
+              <input type="hidden" name="redirect" value="http://drinkrack.de/html/confirmations/confirm_refill.html">
+
+              <!-- Custom Subject Line -->
+              <input type="hidden" name="subject" value="DrinkRack: Setup Request">
           
               <div class="py-2">
                 <input type="text"  name="Full Name" id="fname" class="form-control" placeholder="Full name" required>

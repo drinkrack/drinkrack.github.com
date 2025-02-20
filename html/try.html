@@ -167,6 +167,7 @@
             });
           });
         </script>
+        
       </div> <!-- .container -->
     </div> <!-- .page-section -->
     
@@ -178,9 +179,16 @@
             <h2 class="title-section">Tell Us About Your Office</h2>
             <div class="divider"></div>
             
-            <form action="https://api.web3forms.com/submit" method="POST">
+              <!-- Load hCaptcha -->
+              <!-- <script src="https://js.hcaptcha.com/1/api.js" async defer></script> -->
+              
+              <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
 
-              <input type="hidden" name="access_key" value="http://drinkrack.de/html/confirmations/confirm_tryDrinkRack.html">
+                <!-- Redirect after form submission -->
+              <input type="hidden" name="redirect" value="http://drinkrack.de/html/confirmations/confirm_tryDrinkRack.html">
+
+              <!-- Custom Subject Line -->
+              <input type="hidden" name="subject" value="DrinkRack: Restock Request">
               
               <input type="hidden" id="rackSize" name="Rack Size">
               
@@ -228,8 +236,30 @@
                   </p>
                 </label>
               </div>
+
+              <!-- hCaptcha -->
+              <div class="h-captcha" data-sitekey="52784d96-9f9a-40fc-865c-9428ba7e237c">
+              </div>
+              
               <button type="submit" class="btn btn-primary rounded-pill mt-4">Request Your Free Rack</button>
             </form>
+            
+            <script>
+              document.querySelector("form").addEventListener("submit", function(e) {
+                  if (hcaptcha.getResponse() === "") {
+                      e.preventDefault();
+                      alert("Please complete the CAPTCHA before submitting.");
+                  }
+              });
+              </script>
+              <!-- <script>
+                document.querySelector("form").addEventListener("submit", function(e) {
+                    if (hcaptcha.getResponse() === "") {
+                        e.preventDefault();
+                        alert("Please complete the CAPTCHA before submitting.");
+                    }
+                });
+                </script> -->
           </div>
         </div>
       </div> <!-- .container -->

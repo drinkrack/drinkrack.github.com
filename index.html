@@ -453,12 +453,18 @@
               <h2 class="title-section">Contact Us</h2>
               <div class="subhead">Drop Us a Line</div>
               <div class="divider"></div>
-              <form action="https://api.web3forms.com/submit" method="POST">
-
-                <input type="hidden" name="access_key" value="03a8f042-af89-4a01-bd60-be0d2bec3023">
+              <!-- Load hCaptcha -->
+              <!-- <script src="https://js.hcaptcha.com/1/api.js" async defer></script> -->
+              
+                <form action="https://api.web3forms.com/submit" method="POST">
+                <!-- <input type="hidden" name="access_key" value="..."> -->
                 
+                <!-- Redirect after form submission -->
                 <input type="hidden" name="redirect" value="http://drinkrack.de/html/confirmations/confirm_reachOut.html">
     
+                <!-- Custom Subject Line -->
+                <input type="hidden" name="subject" value="DrinkRack: Inquiry from Contact Form">
+                
                 <div class="py-2">
                   <input type="text" class="form-control" name="Full Name" placeholder="Full name" required>
                 </div>
@@ -476,7 +482,7 @@
                       By submitting this form, I consent to being contacted by DrinkRack. I understand that I can withdraw my consent at any time by sending an email to <a href="mailto:info@drinkrack.com">info@drinkrack.com</a> and request the deletion of my data. By using this form, I agree to the storage and processing of my data by this website.
                     </p>
                   </label>
-                </div>
+                </div>                
                 <button type="submit" class="btn btn-primary rounded-pill mt-4">Send Message</button>
               </form>
               <script>
@@ -499,7 +505,7 @@
                   })
                   .catch(error => console.error("Error:", error));
               });
-              </script>
+              </script>  
           </div>
         </div>
       </div> <!-- .container -->
