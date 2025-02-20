@@ -2921,6 +2921,30 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }
 
+/* Selected button style */
+.btn-primary.selected {
+  color: #ffffff;
+  background-color: #31cf68;
+  border-color: #31cf68;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Custom hover color for the selected button */
+.btn-primary.selected:hover {
+  color: #ededed;
+  background-color: #25a452; /* Darker green */
+  border-color: #31cf68;
+}
+/* Prevent blue color on click (active state) */
+.btn-primary.selected:active,
+.btn-primary.selected:focus {
+    color: #ffffff;
+    background-color: #25a452; /* Keep the darker green */
+    border-color: #31cf68;
+    box-shadow: none; /* Remove blue shadow */
+    outline: none; /* Remove blue outline */
+}
+
 .btn-outline-secondary {
   color: #6c757d;
   border-color: #6c757d;
@@ -2963,6 +2987,7 @@ fieldset:disabled a.btn {
   background-color: #28a745;
   border-color: #28a745;
 }
+
 
 .btn-outline-success:focus, .btn-outline-success.focus {
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
