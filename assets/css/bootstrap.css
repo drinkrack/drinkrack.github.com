@@ -2932,15 +2932,15 @@ fieldset:disabled a.btn {
 /* Custom hover color for the selected button */
 .btn-primary.selected:hover {
   color: #ededed;
-  background-color: #25a452; /* Darker green */
-  border-color: #31cf68;
+  background-color: #35BB78; /* Darker green */
+  border-color: #35BB78;
 }
 /* Prevent blue color on click (active state) */
 .btn-primary.selected:active,
 .btn-primary.selected:focus {
     color: #ffffff;
-    background-color: #25a452; /* Keep the darker green */
-    border-color: #31cf68;
+    background-color: #35BB78; /* Keep the darker green */
+    border-color: #35BB78;
     box-shadow: none; /* Remove blue shadow */
     outline: none; /* Remove blue outline */
 }
