@@ -125,11 +125,16 @@
 
                 <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
 
+                <!-- Add the Web3Forms access key -->
+                <input type="hidden" name="access_key" value="03a8f042-af89-4a01-bd60-be0d2bec3023">
+
                 <!-- Redirect after form submission -->
                 <input type="hidden" name="redirect" value="http://drinkrack.de/html/confirmations/confirm_reachOut.html">
 
+                <input type="hidden" name="from_name" value="DrinkRack Website">
+
                 <!-- Custom Subject Line -->
-                <input type="hidden" name="subject" value="DrinkRack: Inquiry from Contact Form">
+                <input type="hidden" name="subject" value="Inquiry from Contact Form">
     
                 <div class="py-2">
                   <input type="text" class="form-control" name="Full Name" placeholder="Full name" required>
@@ -155,27 +160,6 @@
 
                 <button type="submit" class="btn btn-primary rounded-pill mt-4">Send Message</button>
               </form>
-              <!-- <script>
-              document.getElementById("contactForm").addEventListener("submit", function(event) {
-                  event.preventDefault(); // Prevent default form submission
-              
-                  let formData = new FormData(this);
-                  let jsonData = Object.fromEntries(formData.entries());
-              
-                  fetch("http://127.0.0.1:5000/send-message", {  // Change URL when deploying
-                      method: "POST",
-                      headers: {
-                          "Content-Type": "application/json"
-                      },
-                      body: JSON.stringify(jsonData)
-                  })
-                  .then(response => response.json())
-                  .then(data => {
-                      alert(data.success || data.error);
-                  })
-                  .catch(error => console.error("Error:", error));
-              });
-              </script> -->
 
 
               <!-- <script>
@@ -201,6 +185,10 @@
                 }
                 </script> -->
 
+
+              <!--  -->
+              <!-- handling form submissions for a backend service. -->
+              <!--  -->
 
               <!-- <script>
                 document.getElementById('contactForm').addEventListener('submit', async function(event) {
@@ -231,6 +219,8 @@
                     }
                 });
             </script> -->
+
+
               <!-- <script>
                 document.querySelector("form").addEventListener("submit", function(e) {
                     if (hcaptcha.getResponse() === "") {

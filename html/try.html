@@ -184,11 +184,16 @@
               
               <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
 
+              <!-- Add the Web3Forms access key -->
+              <input type="hidden" name="access_key" value="03a8f042-af89-4a01-bd60-be0d2bec3023">
+
                 <!-- Redirect after form submission -->
               <input type="hidden" name="redirect" value="http://drinkrack.de/html/confirmations/confirm_tryDrinkRack.html">
 
+              <input type="hidden" name="from_name" value="DrinkRack Website">
+
               <!-- Custom Subject Line -->
-              <input type="hidden" name="subject" value="DrinkRack: Restock Request">
+              <input type="hidden" name="subject" value="New Request: DrinkRack Setup">
               
               <input type="hidden" id="rackSize" name="Rack Size">
               
@@ -202,7 +207,7 @@
                 <input type="email" id="email" name="Email" class="form-control" placeholder="Email" required>
               </div>
               <div class="py-2">
-                <input type="tel" id="tel" name="Phone Number" class="form-control" placeholder="Phone number" required>
+                <input type="tel" name="Phone Number" id="tel" class="form-control" placeholder="Phone number" required>
               </div>
               <div class="py-2">
                 <input type="text" id="address" name="Address" class="form-control" placeholder="Street name and number" required>

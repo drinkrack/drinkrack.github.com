@@ -457,13 +457,23 @@
               <!-- <script src="https://js.hcaptcha.com/1/api.js" async defer></script> -->
               
                 <form action="https://api.web3forms.com/submit" method="POST">
-                <!-- <input type="hidden" name="access_key" value="..."> -->
                 
+                <!-- Add the Web3Forms access key -->
+                <input type="hidden" name="access_key" value="03a8f042-af89-4a01-bd60-be0d2bec3023">
+
                 <!-- Redirect after form submission -->
-                <input type="hidden" name="redirect" value="http://drinkrack.de/html/confirmations/confirm_reachOut.html">
+                <input type="hidden" name="redirect" value="https://drinkrack.de/html/confirmations/confirm_reachOut.html">
     
+                <input type="hidden" name="from_name" value="DrinkRack Website">
+
                 <!-- Custom Subject Line -->
-                <input type="hidden" name="subject" value="DrinkRack: Inquiry from Contact Form">
+                <input type="hidden" name="subject" value="Inquiry from Contact Form">
+
+                <!-- <input type="hidden" name="reply_to" value="Email"> -->
+                <!-- Optional: But Recommended: To Prevent SPAM Submission.
+                Make sure its hidden by default -->
+                <!-- <input type="checkbox" name="botcheck" class="hidden" style="display: none;"> -->
+
                 
                 <div class="py-2">
                   <input type="text" class="form-control" name="Full Name" placeholder="Full name" required>
@@ -485,7 +495,12 @@
                 </div>                
                 <button type="submit" class="btn btn-primary rounded-pill mt-4">Send Message</button>
               </form>
-              <script>
+
+              <!--  -->
+              <!-- handling form submissions for a backend service. -->
+              <!--  -->
+            
+              <!-- <script>
               document.getElementById("contactForm").addEventListener("submit", function(event) {
                   event.preventDefault(); // Prevent default form submission
               
@@ -505,7 +520,7 @@
                   })
                   .catch(error => console.error("Error:", error));
               });
-              </script>  
+              </script>   -->
           </div>
         </div>
       </div> <!-- .container -->
